@@ -1,0 +1,7 @@
+import.form:
+  path: '/add'
+  defaults:
+    _title: 'Add Employee Data'
+    _form: 'Drupal\crud_module\Form\EmployeeForm'
+  requirements:
+    _permission: 'access content'

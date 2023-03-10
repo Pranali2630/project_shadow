@@ -1,0 +1,31 @@
+<div class="view-content">
+   <table class="views-table cols-4">
+      <thead>
+         <tr>
+            <th class="views-field views-field-id" scope="col"></th>
+            <th id="view-name-table-column" class="views-field views-field-name" scope="col">Name</th>
+            <th id="view-email-table-column" class="views-field views-field-email" scope="col">Email</th>
+            <th id="view-mobile-table-column" class="views-field views-field-mobile" scope="col">Mobile</th>
+         </tr>
+      </thead>
+
+      <div class="row">
+        <div class="view-header" style="float:left">
+            <a href="/project_shadow/display_csv" class="button--primary button  views-display-link views-display-link-data_export_1 btn--primary">Export CSV</a>
+        </div>
+        <div class="view-header">
+            <a href="/project_shadow/register" class="button--primary button  views-display-link views-display-link-data_export_1 btn--primary">Register</a>
+        </div>
+     </div>
+      <tbody>
+        {% for rec in items %}
+         <tr>
+            <td class="views-field views-field-id">{{ rec.id }}</td>
+            <td headers="view-name-table-column" class="views-field views-field-name">{{ rec.name }} </td>
+            <td headers="view-email-table-column" class="views-field views-field-email">{{ rec.email }}          </td>
+            <td headers="view-mobile-table-column" class="views-field views-field-mobile">{{ rec.mobile }}        </td>
+         </tr>
+        {% endfor %}
+      </tbody>
+   </table>
+</div>

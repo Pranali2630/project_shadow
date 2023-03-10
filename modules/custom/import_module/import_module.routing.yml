@@ -1,0 +1,23 @@
+
+import.form:
+  path: '/import'
+  defaults:
+    _title: 'Import Date'
+    _form: 'Drupal\import_module\Form\ImportForm'
+  requirements:
+    _permission: 'access content'
+
+# register.viewlist:
+#   path: '/viewlist'
+#   defaults:
+#     _controller: '\Drupal\task1_module\Controller\task1Controller::showdata'
+#   requirements:
+#     _permission: 'access content' 
+
+# register.display_csv:
+#   path: '/display_csv'
+#   defaults:
+#     _controller: '\Drupal\task1_module\Controller\task1Controller::downloadCsv'
+#   requirements:
+#     _permission: 'access content' 
+

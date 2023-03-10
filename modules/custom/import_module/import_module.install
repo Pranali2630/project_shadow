@@ -1,0 +1,43 @@
+<?php
+function import_module_schema() {
+    $schema['import_data'] = [
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'not null' => TRUE,
+            ],
+            'name' => [
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'email' => [
+                'type' => 'varchar',
+                'length' => 255
+            ],
+            'mobile' => [
+                'type' => 'varchar',
+                'length' => 500
+            ],
+            ],
+        'primary key' => ['id'],
+    ];
+
+    return $schema;
+}
+
+function import_module_install() {
+    // $rows = [
+    //     ['name' => 'Pranali' , 'email' => '7273650011'],
+    //     ['name' => 'Monal' , 'email' => '7273650003'],
+    // ];
+
+    $db_connection = \Drupal::database();
+
+    // if ($db_connection->schema()->tableExists('register_form'))
+    // {
+    //     foreach($rows as $row){
+    //         $db_connection->insert('register_form')->fields($row)->execute();
+    //     }
+    // }
+}
+

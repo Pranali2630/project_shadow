@@ -1,0 +1,30 @@
+task1_module.task1:
+  path: '/task1'
+  defaults:
+    _controller: '\Drupal\task1_module\Controller\task1Controller::task1'
+    _title: '<h5>Create a Custom Module which will read the data from the DB and download it as an excel file.</h5>'
+  requirements: 
+    _permission: 'access content'
+
+register.form:
+  path: '/register'
+  defaults:
+    _title: 'Registeration form'
+    _form: 'Drupal\task1_module\Form\RegisterForm'
+  requirements:
+    _permission: 'access content'
+
+register.viewlist:
+  path: '/viewlist'
+  defaults:
+    _controller: '\Drupal\task1_module\Controller\task1Controller::showdata'
+  requirements:
+    _permission: 'access content' 
+
+register.display_csv:
+  path: '/display_csv'
+  defaults:
+    _controller: '\Drupal\task1_module\Controller\task1Controller::downloadCsv'
+  requirements:
+    _permission: 'access content' 
+
